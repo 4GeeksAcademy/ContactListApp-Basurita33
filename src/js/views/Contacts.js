@@ -20,9 +20,8 @@ const Contacts = () => {
             </div>
             <div className="agenda-body row">
                 {store.contacts.map((contact, index) => {
-                    return (
-                        
-                        <div className="col-12 col-md-6 col-lg-4 mb-4" key={index}>
+                    return (                      
+                        <div className="col-12" key={index}>
                           <ContactCard contact={contact} />
                         </div>
                     )

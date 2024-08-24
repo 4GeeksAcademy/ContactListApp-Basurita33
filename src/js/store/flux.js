@@ -52,7 +52,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					}
 					if (response.ok) {
 						const data = await response.json();
-						const contacts = data.contacts;
+						const contacts = data.contacts;						
 						setStore({ contacts: contacts });
 					} else {
 						console.error('Failed to fetch contacts');
