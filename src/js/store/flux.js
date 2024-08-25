@@ -108,6 +108,34 @@ const getState = ({ getStore, getActions, setStore }) => {
 					console.error('Error deleting contact:', error);
 				}
 			},	
+
+			// editContact: async (index, name, address, phone, email) => {
+			// 	const store = getStore();
+			// 	const contact = store.contacts[index];
+			// 	const updatedContact = {
+			// 		...contact,
+			// 		full_name: name,
+			// 		address: address,
+			// 		phone: phone,
+			// 		email: email
+			// 	};
+
+			// 	try {
+			// 		const response = await fetch(`https://playground.4geeks.com/apis/fake/contact/${contact.id}`, {
+			// 			method: 'PUT',
+			// 			headers: {
+			// 				'Content-Type': 'application/json'
+			// 			},
+			// 			body: JSON.stringify(updatedContact),
+			// 		});
+			// 		if(response.ok) {
+			// 			const updatedContact = await response.json();
+			// 			setStore({ contacts: store.contacts.map((contact, i) => i === index ? updatedContact : contact) });
+			// 		} else { console.log('Failed to edit contact'); }
+			// 	} catch (error) {
+			// 		console.error('Error editing contact:', error);
+			// 	}								
+			// },
 		}
 	}
 };
