@@ -1,58 +1,95 @@
-.card-container {
-    align-items: center;
-    justify-content: center;
-    padding: 15px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 80%; 
-    flex-direction: column;
-  }
-  
-  .card-image {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-    border-radius: 50%;
-  }
-  
-  .contact-card-info {
-    flex-grow: 1;
-    margin-left: 15px;
-  }
-  
-  .contact-card-info h5 {
-    margin: 0;
-    font-size: 1.25rem;
-    font-weight: bold;
-  }
-  
-  .contact-card-info p {
-    margin: 5px 0;
-    color: hsl(0, 0%, 0%);
-  }
-  
-  .button-group {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .button-group button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .button-group button i {
-    font-size: 1.2rem;
-    color: #333;
-  }
-  
-  .button-group button:hover i {
-    color: #000;
-  }
+body {
+  background-image: url(https://images6.alphacoders.com/860/860645.png);
+  background-size: cover;
+}
 
+.agenda-header {
+  width: 80%;
+}
+
+.agenda-title {
+  color: rgb(0, 0, 0);
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: 'New Super Mario Font U', sans-serif;                                               
+}
+
+.col-12 {
+  justify-content: center;
+}
+
+.card-container {
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 80%; 
+  flex-direction: column;
+}
+
+.card-header {
+  background-color: #f9f9f9;
+  border: 3px solid rgb(16, 129, 12);
+  border-radius: 8px !important;
+}
+  
+.card-image {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.card-title {
+  margin-left: 15px;
+  display: inline-block;
+  font-weight: 700;
+}
+  
+.contact-card-body {
+  justify-content: center;
+  flex-grow: 1;
+  margin-left: 6rem;
+}
+   
+.card-text {
+  display: block;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.strong {
+  margin-left: 15px;
+}
+  
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  
+  gap: 10px;
+}
+  
+.button-group button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+  
+.button-group button i {
+  font-size: 1.2rem;
+  color: #333;
+}
+  
+.button-group button:hover i {
+  color: #000;
+}
+
+
+  
  

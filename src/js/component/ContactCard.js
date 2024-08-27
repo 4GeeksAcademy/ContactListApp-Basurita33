@@ -29,23 +29,25 @@ export const ContactCard = ({ contact, id }) => {
             />
             <h5 className="card-title">{contact.name}</h5>
           
-        <div className="contact-card-info">         
-          <p className="card-text">Email: {contact.email}</p>
-          <p className="card-text">Phone: {contact.phone}</p>        
-          <p className="card-text">Address: {contact.address}</p>
-        </div>
-        <div className="button-group">
-          <button
-            className="edit-contact"
-            onClick={() => {
-              actions.saveContactToEdit(contact)
-              navigate("/edit")}}
-          >
-            <i className="fa-solid fa-pen-to-square"></i>
-          </button>
-          <button className="delete-contact" onClick={handleDeleteClick}>
-             <i className="fas fa-trash"></i>
-          </button>
+        <div className="contact-card-body">         
+          <p className="card-text"><i class="fa-solid fa-envelope"></i><strong className="strong">Email:</strong> {contact.email}</p>
+          
+          <p className="card-text"><i class="fa-solid fa-phone"></i><strong className="strong">Phone:</strong>  {contact.phone}</p>
+                  
+          <p className="card-text"><i class="fa-solid fa-house"></i><strong className="strong">Address:</strong> {contact.address}</p>
+          <div className="button-group">
+            <button
+             className="edit-contact"
+             onClick={() => {
+               actions.saveContactToEdit(contact)
+               navigate("/edit")}}
+            >
+              <i className="fa-solid fa-pen-to-square"></i>
+            </button>
+            <button className="delete-contact" onClick={handleDeleteClick}>
+              <i className="fas fa-trash"></i>
+            </button>
+          </div>
         </div>
 
         {showModal && (
