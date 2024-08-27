@@ -6,34 +6,34 @@ export const ConfirmDeleteModal = ({ show, setShow, contact, id }) => {
 
   return (
     <div
-      class="modal"
-      tabindex="-1"
+      className="modal"
+      tabIndex="-1"
       style={show ? { display: "block" } : { display: "none" }}
     >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Delete contact</h5>
+      <div className="modal-dialog">
+        <div className="modal-content">
+          <div className="modal-header">
+            <h5 className="modal-title">Delete contact</h5>
             <button
               type="button"
               onClick={() => {
                 setShow(false);
               }}
-              class="btn-close"
+              className="btn-close"
               data-bs-dismiss="modal"
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body">
+          <div className="modal-body">
             <p>Are you sure you want to delete {contact}</p>
           </div>
-          <div class="modal-footer">
+          <div className="modal-footer">
             <button
               type="button"
               onClick={() => {
                 setShow(false);
               }}
-              class="btn btn-secondary"
+              className="btn btn-secondary"
               data-bs-dismiss="modal"
             >
               Cancel
@@ -43,7 +43,7 @@ export const ConfirmDeleteModal = ({ show, setShow, contact, id }) => {
               onClick={() => {
                 actions.deleteContact(id);
               }}
-              class="btn btn-danger"
+              className="btn btn-danger"
               data-bs-dismiss="modal"
             >
               Delete

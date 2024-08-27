@@ -3,24 +3,38 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			slug: "bruno-beceiro",
 			contacts: [],
+			contact: {},
 		},
 		actions: {
-			checkAgenda: async () => {
+
+			saveContactToEdit: (contact) => {
+				setStore({contact: contact})
+			},
+
+			editContact: async (contact, navigate) => {
 				try {
-					const response = await fetch("https://playground.4geeks.com/contact/agendas/bruno-beceiro", {
-						method: 'GET',
+					const response = await fetch("https://playground.4geeks.com/contact/agendas/bruno-beceiro/contacts/" + contact.id , {
+						method: 'PUT',
+						body: JSON.stringify(contact),
 						headers: {
 							'Content-Type': 'application/json'
 						},
-					});
-					if (!response.ok) {
-						getActions().createAgenda();
+					});		
+					if (response.ok) {
+						const data = await response.json();
+						console.log('Contact edited:', data);
+						getActions().fetchContacts();
+						navigate("/")
 					} else {
-						console.log('Agenda already exists')
+						console.error('Failed to edit contact');
 					}
+					
 				} catch (error) {
-					console.error('Error fetching/creating agenda');
+					
 				}
+
+
+
 			},
 
 			createAgenda: async () => {
@@ -48,7 +62,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				try {
 					const response = await fetch('https://playground.4geeks.com/contact/agendas/bruno-beceiro');
 					if (response.status == 404) {
-						getActions(createAgenda());
+						getActions().createAgenda();
 					}
 					if (response.ok) {
 						const data = await response.json();

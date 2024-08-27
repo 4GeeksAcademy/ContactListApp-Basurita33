@@ -5,7 +5,7 @@ import { ContactCard } from "../component/ContactCard";
 
 const Contacts = () => {
     const { store, actions } = useContext(Context);
-    actions.fetchContacts();
+
     
 
     return (
