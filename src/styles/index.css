@@ -26,14 +26,14 @@ body {
   margin-bottom: 15px;
   border: 1px solid #ffffff;
   border-radius: 8px;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: 80%; 
   flex-direction: column;
 }
 
 .card-header {
-  background-color: #f9f9f9;
+  background-color: rgb(255, 255, 255);
   border: 3px solid rgb(16, 129, 12);
   border-radius: 8px !important;
 }
